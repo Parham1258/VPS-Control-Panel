@@ -21,4 +21,4 @@ If_No_Permission_404=True # If you don't have permission to view a server, the A
 VMRUN_PATH = r'"C:\Program Files (x86)\VMware\VMware Workstation\vmrun.exe"'
 
 # Developer Options:
-Debug=True
+Debug=False
