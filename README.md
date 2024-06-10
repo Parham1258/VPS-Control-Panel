@@ -9,14 +9,14 @@ VPS Control Panel provides features such as
 To install VPS Control Panel you need to have VMware Workstation installed  
 Bellow you can see a list of the supported VMware Workstation versions
 | Vmware Workstation version | Supported | Description                                                   |
-|----------------------------|------------------|---------------------------------------------------------------|
+|----------------------------|:------------------:|---------------------------------------------------------------|
 | VMware Workstation 17      | ✅ | Latest version, This panel is also created with this version  |
 | VMware Workstation 16 and bellow | ⚠️ | **You shouldn't use old versions as they may have issues and vulnerabilities** *but if you still have to*, should work as long as there is a `vmrun` |
 | VMware Workstation 5 and bellow | ❌ | There is no vmrun on these versions |
 
 Compatible Operating Systems
 | OS | Supported | Description |
-|----|-----------|-------------|
+|----|:-----------:|-------------|
 | Windows 🪟 | ✅ | This panel is also created with Windows |
 | Linux 🐧 | ✅ | Extra steps required |
 # Installation
