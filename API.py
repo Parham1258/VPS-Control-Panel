@@ -19,7 +19,7 @@ def run_vmrun_command(command, server, resp=True):
     if not resp: return result.stdout.strip()
     if result.returncode == 0: return {"status": "success"}, 200
     else:
-        print(f"\033[0mVMRUN Error:\n{result.stdout.strip()}")
+        print(f"\033[0;31mVMRUN Error:\n{result.stdout.strip()}\033[0")
         return {"status": "error", "error": "An unknown error occured; If you're a admin, Please check the console"}, 500
 
 ip_cooldowns={}

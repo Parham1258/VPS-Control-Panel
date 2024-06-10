@@ -1,7 +1,12 @@
+import os
+import sys
 import json
 from threading import Thread
 import time
-VM_PATHS = json.load(open("VM PATHS.json", encoding="utf8+"))
+if not os.path.isfile("VM Paths.json"):
+    print("\033[0;31mCouldn't find `VM Paths.json`\033[0")
+    sys.exit(1)
+VM_PATHS = json.load(open("VM Paths.json", encoding="utf8+"))
 def Loader():
     global VM_PATHS
     while True:
