@@ -25,8 +25,8 @@ Use the command bellow to clone the repo
 git clone https://github.com/Parham1258/VPS-Control-Panel
 ```
 > [!NOTE]
-> If you're on linux, you should install pip and python 3.12
-> If you're on windows, you should install the latest python version from https://www.python.org/
+> If you're on linux, you should install pip and python 3.12  
+> If you're on windows, you should install the latest python version from https://www.python.org/  
 > Make sure to do `Add to PATH` when installing python on windows
 
 Now do
