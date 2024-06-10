@@ -6,6 +6,7 @@ VPS Control Panel provides features such as
 - Easy to use GUI
 - and more...
 ## [Wiki](https://github.com/Parham1258/VPS-Control-Panel/wiki)
+You can also find the old Guide [here](https://github.com/Parham1258/VPS-Control-Panel/blob/main/Guide.md)
 ### Credits
 Backend by [Parham1258](https://github.com/Parham1258)\
 Frontend by [Inventionpro](https://github.com/inventionpro)
