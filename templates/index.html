@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>VPS Control Panel</title>
+    <link rel="stylesheet" href="/static/style.css">
+  </head>
+  <body>
+    <h1>VPS Control Panel</h1>
+    <h2>Your servers</h2>
+    <strong>
+      <noscript>
+        <div class="noscript">
+          It seems like you have JavaScript disabled<br>This site won't be able to function without JavaScript</noscript>
+        </div>
+      </noscript>
+    </strong>
+    <div id="actions">
+      <button onclick="document.getElementById('keyask').showModal()">Modify key</button>
+      <button onclick="servers()" id="ref">Refresh</button>
+    </div>
+    <div id="servers">
+      <div id="loading">
+        <div id="bar"></div>
+        <p>Loading your servers, please wait...</p>
+      </div>
+    </div>
+    <dialog id="keyask">
+      <button class="modal-close" onclick="this.parentElement.close()">x</button>
+      <label for="key">Input your key:</label>
+      <input name="key" id="key">
+      <button onclick="setKey()">Set key</button>
+    </dialog>
+    <script src="/static/main.js"></script>
+  </body>
+</html>

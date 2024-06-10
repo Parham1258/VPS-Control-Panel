@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Viewing {{Name}} - VPS Control Panel</title>
+    <link rel="stylesheet" href="/static/style.css">
+  </head>
+  <body style="margin:0;height:100vh;">
+    <a href="/" class="no_underline"><h1>VPS Control Panel</h1></a>
+    <h2 class="status-{{Status}}" style="width:fit-content;margin:0 auto;padding-left:5px;border-radius:0.25rem;transition:500ms;" id="status">Viewing {{Name}}</h2>{#
+    <div id="actions">
+      <a href="/"><button>Go back</button></a>
+    </div>#}
+    <div id="btns">
+      <button onclick="action('power_on')" class="server-action start">Start</button>
+      <button onclick="action('restart')" class="server-action restart">Restart</button>
+      <button onclick="action('shutdown')" class="server-action stop">Stop</button>
+      <br>
+      <button onclick="danger('reset')" class="server-action force">Force restart</button>
+      <button onclick="danger('power_off')" class="server-action force">Force stop</button>
+    </div>{% if VNC %}
+    <iframe class="noVNC" style="border:2px #fff solid" src="/static/noVNC/vnc.html?host={{Host}}&port={{Port}}&password={{Password}}{#&autoconnect=1&reconnect=1&reconnect_delay=1000#}&encrypt=0"></iframe>
+    {% endif %}
+    <dialog id="loading">
+      <div id="bar"></div>
+      <p>Loading...</p>
+    </dialog>
+    <dialog id="sure">
+      <button class="modal-close" onclick="this.parentElement.close()">x</button>
+      <p>Are you sure you want to do this?</p>
+      <p>It may cause data corruption</p>
+      <button onclick="con()">I'm sure</button>
+    </dialog>
+    <dialog id="res">
+      <button class="modal-close" onclick="this.parentElement.close()">x</button>
+      <p id="stat"></p>
+    </dialog>
+    <script src="/static/server.js"></script>
+  </body>
+</html>
