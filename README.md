@@ -53,5 +53,5 @@ Done! you can use the panel now
 > [!NOTE]
 > To add/remove servers from the VPS Control Panel, edit the `VM Paths.json` and it will be automatically reloaded
 # Credits
-Backend by [Parham1258](https://github.com/Parham1258)
+Backend by [Parham1258](https://github.com/Parham1258)\
 Frontend by [Inventionpro](https://github.com/inventionpro)
