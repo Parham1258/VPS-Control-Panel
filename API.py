@@ -35,14 +35,14 @@ def ip_cooldown():
 def get_server_status(server):
     server_status=run_vmrun_command("list", server, False)
     if server_status==None: return None
-    server_status=server_status.strip().split("\n")[1:]
-    return server_status
+    return server_status.strip().split("\n")[1:]
 
 @app.route("/servers")
 def servers():
     if "Key" not in request.cookies: return {"status": "error", "error": "Unauthorized"}, 401
     server_status=run_vmrun_command("list", None, False)
     if server_status==None: return {"error": "A action for this server is already running"}
+    server_status=server_status.strip().split("\n")[1:]
     servers=[]
     for id in VM_PATHS:
         if request.cookies["Key"]==VM_PATHS[id][1]: servers.append({"ID": id, "Status": "Online" if VM_PATHS[id][0] in server_status else "Offline", "Name": VM_PATHS[id][2]})
