@@ -9,7 +9,7 @@ noVNC_Host="hosting.parham200.ir"
 Lan_IP="192.168.0.213"
 Lan_Subnet="192.168."
 
-Multiple_API_Actions=False # Whether you want to allow multiple API actions at once or not, will make things buggy
+Multiple_API_Actions=False # Whether you want to allow multiple API actions for a server at once or not
 
 # Cooldown System:
 Cooldown_Toggle=True
