@@ -14,7 +14,7 @@ def run_vmrun_command(command, server, resp=True):
             if resp: return {"error": "A action for this server is already running"}
             else: return None
         server_action_running.append(server)
-    result = subprocess.run(f"{VMRUN_PATH} {command}", capture_output=True, text=True)
+    result = subprocess.run(f"{VMRUN_PATH} {command}", capture_output=True, text=True, shell=True)
     if not Multiple_API_Actions and server!=None: server_action_running.remove(server)
     if not resp: return result.stdout.strip()
     if result.returncode == 0: return {"status": "success"}, 200
