@@ -1,12 +1,26 @@
-from flask import Flask, render_template, request, abort
+from flask import Flask, request, abort, make_response, redirect, send_file, Response
+import os
 from waitress import serve
 from Config import Host, Port, Threads, noVNC_Host, Lan_IP, Lan_Subnet, Debug
+from Utils import language, langs
+language=language(request)
+render_template=language.render_template
 
-app = Flask("VPS Control Panel")
+app = Flask("VPS Control Panel", static_folder=None)
 
 import API
 app.register_blueprint(API.app, url_prefix="/api")
 from DB import VM_PATHS
+
+@app.before_request
+def Lang_auto():
+    if "Lang" not in request.cookies and "Accept-Language" in request.headers:
+        languages=request.headers["Accept-Language"].split(",")
+        for language in languages:
+            if language in langs:
+                resp=make_response(redirect(request.full_path))
+                resp.set_cookie("Lang", language)
+                return resp
 
 @app.errorhandler(404)
 def not_found_error(error): return render_template("404.html"), 404
@@ -21,6 +35,16 @@ def server():
     else: vnc={"VNC": False}
     server_status=API.run_vmrun_command("list", None, False).strip().split("\n")[1:]
     return render_template("server.html", ID=request.args["id"], Name=VM_PATHS[request.args["id"]][2], Status="Online" if VM_PATHS[request.args["id"]][0] in server_status else "Offline", **vnc), 200
+allowed_css_translation=["style.css"]
+allowed_js_translation=["main.js", "server.js"]
+@app.route("/static/<path:file>")
+def Static(file):
+    looking=f"./static/{file}"
+    if os.path.isfile(looking):
+        if file in allowed_css_translation: return Response(language.translate(open(looking, encoding="utf8+").read()), mimetype="text/css")
+        elif file in allowed_js_translation: return Response(language.translate(open(looking, encoding="utf8+").read()), mimetype="text/javascript")
+        else: return send_file(looking)
+    else: return abort(404)
 
 print("\033[0;32mStarting VPS Control Panel\n\033[0;32mMade by Parham and Inventionpro with ❤️\033[0m")
 if Debug: app.run(host=Host, port=Port, debug=True)

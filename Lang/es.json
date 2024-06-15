@@ -1,0 +1,37 @@
+{
+  "DIR": "ltr",
+  "LANG": "es",
+  "VPS Control Panel": "Panel de Control VPS",
+  "Your servers": "Tus servidores",
+  "It seems like you have JavaScript disabled": "Parece que tienes JavaScript desactivado",
+  "This site won't be able to function without JavaScript": "Este sitio no funcionara win javascript",
+  "Modify key": "Modificar llave",
+  "Refresh": "Refrescar",
+  "Loading your servers, please wait": "Cargando tus servidores, espera porfavor",
+  "Input your key": "Ingresa tu llave",
+  "Set key": "Establecer llave",
+
+  "Failed to load servers": "No se pudo cargar los servidores",
+  "Set a key to view servers": "Establece una llave para ver servidores",
+
+  "Viewing": "Viendo",
+  "Go back": "Vuelve",
+
+  "Start": "Encender",
+  "Restart": "Reiniciar",
+  "Stop": "Apagar",
+  "Force restart": "Forzar reinicio",
+  "Force stop": "Forzar apagado",
+  "Loading": "Cargando",
+  "Are you sure you want to do this?": "¿Estas seguro que quieres hacer esto?",
+  "It may cause data corruption": "Puede causar corrupcion de datos",
+  "I'm sure": "Estoy seguro",
+
+  "Action successful": "Accion exitosa",
+  "Action failed": "Accion fallida",
+  "Error": "Error",
+
+  "Go home": "Vuelve a inicio",
+  "Not found": "No encontrado",
+  "Not allowed": "No permitido"
+}

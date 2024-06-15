@@ -1,0 +1,37 @@
+{
+  "DIR": "rtl",
+  "LANG": "fa",
+  "VPS Control Panel": "کنترل پنل سرور ابری",
+  "Your servers": "سرور های شما",
+  "It seems like you have JavaScript disabled": "مثل اینکه شما جاوا اسکریپت را غیر فعال کردید",
+  "This site won't be able to function without JavaScript": "این سایت نمی تواند بدون جاوا اسکریپت فعالیت کند",
+  "Modify key": "عوض کردن کلید",
+  "Refresh": "تازه کردن",
+  "Loading your servers, please wait": "در حال بارگذاری سرور های شما، لطفا صبر کنید",
+  "Input your key": "کلید خود را وارد کنید",
+  "Set key": "ثبت کلید",
+
+  "Failed to load servers": "بارگذاری سرور ها ناموفق آمیز بود",
+  "Set a key to view servers": "یک کلید ثبت کنید تا بتوانید سرور ها را ببینید",
+
+  "Viewing": "در حال مشاهده",
+  "Go back": "برگرد",
+
+  "Start": "روشن کردن",
+  "Restart": "راه اندازی مجدد",
+  "Stop": "متوقف کردن",
+  "Force restart": "راه اندازی مجدد اجباری",
+  "Force stop": "توقف اجباری",
+  "Loading": "در حال بارگذاری",
+  "Are you sure you want to do this?": "آیا مطمئنید که می خواهید این کار را انجام دهید؟",
+  "It may cause data corruption": "ممکن است باعث خرابی داده ها شود",
+  "I'm sure": "من مطمئن هستم",
+
+  "Action successful": "اقدام با موفقیت انجام شد",
+  "Action failed": "اقدام ناموفق بود",
+  "Error": "خطا",
+
+  "Go home": "برو خونه",
+  "Not found": "پیدا نشد",
+  "Not allowed": "مجاز نیست"
+}

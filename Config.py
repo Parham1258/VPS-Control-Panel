@@ -1,4 +1,6 @@
 # Config file for VPS Control Panel
+Company="Company" # Company name, will show before the VPS Control Panel text
+
 Host="0.0.0.0" # Host (127.0.0.1 for local access only, 0.0.0.0 for remote access)
 Port=50009 # Port
 Threads=6

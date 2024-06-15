@@ -1,5 +1,10 @@
 @import url("https://fonts.googleapis.com/css?family=Rubik");
 
+p, h1, h2, h3, span {
+  direction: DIR;
+  font-family: "Rubik", Arial;
+}
+
 body {
   background-color: #202020;
   color: #fff;

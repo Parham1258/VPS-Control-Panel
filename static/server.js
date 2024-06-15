@@ -20,7 +20,7 @@ function action(name) {
       })
       document.getElementById('loading').close()
       if (res.status === 'success') {
-        document.getElementById('stat').innerHTML = 'Action succesful';
+        document.getElementById('stat').innerHTML = 'Action successful';
         document.getElementById('res').showModal()
         fetch('/api/server_status?id='+id).then(async res=>{
           res = await res.json();
