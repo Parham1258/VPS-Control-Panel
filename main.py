@@ -8,7 +8,7 @@ render_template=language.render_template
 
 app = Flask("VPS Control Panel", static_folder=None)
 
-import API
+import Web.API as API
 app.register_blueprint(API.app, url_prefix="/api")
 from DB import VM_PATHS
 
