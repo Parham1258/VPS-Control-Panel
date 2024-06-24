@@ -2,7 +2,7 @@
 title VPS Control Panel Installer
 cls
 color f
-echo [0;33mThis script requiers Python to run, Please install the latest version of python from https://www.python.org/ and make sure to check the `Add to PATH`
+echo [0;33mThis script requiers Python to run, Please install the latest version of Python from https://www.python.org/ and make sure to check the `Add to PATH`
 echo [0;32mThis script will install VPS Control Panel in ./VPS-Control-Panel directory
 echo [0mPress any key to continue with the installation
 pause >nul
