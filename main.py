@@ -31,7 +31,7 @@ def index(): return render_template("index.html"), 200
 @app.route("/server")
 def server():
     if "id" not in request.args or request.args["id"] not in VM_PATHS or "Key" not in request.cookies or request.cookies["Key"]!=VM_PATHS[request.args["id"]][1]: return abort(404), 404
-    if len(VM_PATHS[request.args["id"]])>3: vnc={"VNC": True, "Host": Lan_IP if request.remote_addr.startswith(Lan_Subnet) else noVNC_Host, "Port": VM_PATHS[request.args["id"]][3], "Password": VM_PATHS[request.args["id"]][4]}
+    if len(VM_PATHS[request.args["id"]])>3: vnc={"VNC": True, "Host": Lan_IP if Lan_Subnet != "" and request.remote_addr.startswith(Lan_Subnet) else noVNC_Host, "Port": VM_PATHS[request.args["id"]][3], "Password": VM_PATHS[request.args["id"]][4]}
     else: vnc={"VNC": False}
     server_status=API.run_vmrun_command("list", None, False).strip().split("\n")[1:]
     return render_template("server.html", ID=request.args["id"], Name=VM_PATHS[request.args["id"]][2], Status="Online" if VM_PATHS[request.args["id"]][0] in server_status else "Offline", **vnc), 200
