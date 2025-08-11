@@ -9,5 +9,5 @@ VPS Control Panel provides features such as
 By starring the project, you give us the motivation to continue this project
 # [Wiki](https://github.com/Parham1258/VPS-Control-Panel/wiki)
 ### Credits
-Backend by [Parham1258](https://github.com/Parham125)\
+Backend by [Parham125](https://github.com/Parham125)\
 Frontend by [Inventionpro](https://github.com/inventionpro)
